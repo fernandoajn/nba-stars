@@ -43,6 +43,7 @@ if (isset($_POST['submit'])) {
     }
   }
 } else {
+  // So pode ser acessado pela pagina de login
   header("Location: login.php?login=error");
   exit();
 }

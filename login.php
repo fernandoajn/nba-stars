@@ -1,5 +1,9 @@
 <?php 
 include("header.php");
+// Impedindo que usuario va para pagina de login quando estiver logado
+if(isset($_SESSION['usuario'])){
+    header("Location:dashboard.php");
+ }
 ?>
     <div class="content">
         <span>Monte sua equipe!</span>

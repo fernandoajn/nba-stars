@@ -130,6 +130,21 @@ a:hover {
   .sobre a {
     color: #ccc; }
 
+.cpanel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box; }
+
+.players-list {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2em; }
+  .players-list th {
+    background-color: #C71A33;
+    padding: 5px 10px; }
+
 .footer {
   width: 100%;
   background-color: #244187;
