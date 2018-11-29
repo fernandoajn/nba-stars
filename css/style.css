@@ -1,0 +1,115 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: rgba(0, 0, 0, 0.8) url("https://cdn.hipwallpaper.com/i/7/75/VUov1P.jpg") no-repeat fixed center;
+  background-size: cover;
+  background-blend-mode: darken; }
+
+a {
+  text-decoration: none; }
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  color: #FFF;
+  padding: 0 2%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .navbar a {
+    color: #FFF; }
+  .navbar h1 {
+    font-weight: bold; }
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  width: 10%; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3% 0;
+  height: 80vh;
+  color: #FFF; }
+  .container span {
+    font-size: 3em; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 2% 3%;
+  color: #FFF; }
+  .content span {
+    font-weight: bolder;
+    line-height: 1.5em; }
+  .content small {
+    line-height: 1.2em;
+    text-align: center; }
+
+.main {
+  display: flex;
+  align-items: center; }
+
+.char {
+  height: 300px;
+  filter: grayscale(0.5); }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px; }
+  .form input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 0.9em;
+    width: 300px;
+    text-align: center; }
+
+.btn {
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 0.9rem;
+  text-align: center; }
+
+.btn-primary {
+  background-color: #244187;
+  color: #FFF; }
+
+.btn-secondary {
+  background-color: #C71A33;
+  color: #FFF; }
+
+.sobre {
+  text-align: center;
+  width: 70%; }
+  .sobre h1 {
+    font-size: 3em;
+    line-height: 1.5em;
+    font-weight: bolder; }
+  .sobre p {
+    font-size: 1.1em; }
+
+.footer {
+  width: 100%;
+  background-color: #244187;
+  position: absolute;
+  bottom: 0;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh; }
+
+/*# sourceMappingURL=style.css.map */
