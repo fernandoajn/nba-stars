@@ -1,5 +1,5 @@
 <?php 
-    include("header.php");
+include("header.php");
 ?>
     <div class="content">
         <span>Monte sua equipe!</span>
@@ -9,14 +9,13 @@
             <form action="includes/login.config.php" class="form" method="post">
                 <input type="text" name="usuario" placeholder="Usuário">
                 <input type="password" name="senha" placeholder="Senha">
-                <button type="submit" class="btn btn-primary">Entrar</button>
-                
-                <a class="btn btn-secondary" type="button" href="index.php">Cadastrar-se</a>
+                <!-- <a class="btn btn-secondary" type="button" href="index.php">Cadastrar-se</a> -->
+                <button type="submit" name="submit" class="btn btn-secondary">Entrar</button>
             </form>
             
         </div>
     </div>
     
 <?php 
-    include("footer.php");
+include("footer.php");
 ?>

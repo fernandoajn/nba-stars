@@ -21,5 +21,24 @@
 .nav-menu {
   display: flex;
   justify-content: space-around;
-  width: 10%;
+  width: 15%;
+  align-items: center;
 }
+
+.btn-logout {
+  border: 0;
+  background: none;
+  color: $branco;
+  font-size: 1.01em;
+  border-radius: 5px;
+  transition: 0.3s;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  display: inline;
+
+  &:hover {
+    background-color: $vermelho;
+    cursor: pointer;
+  }
+}
+

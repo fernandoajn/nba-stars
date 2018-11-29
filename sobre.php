@@ -3,7 +3,7 @@ include("header.php");
 ?>
   <div class="content">
     <div class="sobre">
-      <h1>Sobre o NBA Stars</h1>
+      <h1>Sobre o NBA STARS</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac massa et ligula ultrices placerat. 
         Mauris eu vehicula dui. Duis auctor purus sapien, sit amet porta ligula placerat ac. Pellentesque sollicitudin ligula nec quam egestas,
          ut rhoncus lacus auctor. In vehicula nibh in quam sollicitudin, in fermentum quam rutrum. Donec malesuada sapien ac metus placerat maximus. 

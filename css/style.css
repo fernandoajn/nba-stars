@@ -1,3 +1,10 @@
+/*
+
+  Theme: NBA Stars
+  Version: 1.0.0
+  Author: @fernandoajn
+
+*/
 body {
   font-family: 'Noto Sans KR', sans-serif;
   background: rgba(0, 0, 0, 0.8) url("https://cdn.hipwallpaper.com/i/7/75/VUov1P.jpg") no-repeat fixed center;
@@ -5,7 +12,8 @@ body {
   background-blend-mode: darken; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #FFF; }
 
 .navbar {
   width: 100%;
@@ -24,7 +32,22 @@ a {
 .nav-menu {
   display: flex;
   justify-content: space-around;
-  width: 10%; }
+  width: 15%;
+  align-items: center; }
+
+.btn-logout {
+  border: 0;
+  background: none;
+  color: #FFF;
+  font-size: 1.01em;
+  border-radius: 5px;
+  transition: 0.3s;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  display: inline; }
+  .btn-logout:hover {
+    background-color: #C71A33;
+    cursor: pointer; }
 
 .container {
   display: flex;
@@ -111,5 +134,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 4vh; }
+  .footer a:hover {
+    text-decoration: underline; }
 
 /*# sourceMappingURL=style.css.map */

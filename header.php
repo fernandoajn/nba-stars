@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +18,20 @@
 </head>
 <body>
   <nav class="navbar">
-    <h1>.</h1>
-    <ul class="nav-menu">
+      <h1>NBA STARS</h1>
+      <ul class="nav-menu">
       <li><a href="index.php">Home</a></li>
       <li><a href="sobre.php">Sobre</a></li>
+    <?php 
+      if(isset($_SESSION['id'])) {
+        echo ' <li><form action="includes/logout.config.php" method="post">
+                <button type="submit" name="submit" class="btn-logout">Sair</button>
+              </form></li>';
+      }
+    ?>
     </ul>
+
+    
   </nav>
 
   <section class="container">

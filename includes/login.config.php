@@ -1,35 +1,46 @@
 <?php
-  include("includes/connection.php");
-  include("header.php");
-  
-  if(empty($_POST['usuario']) || empty($_POST['senha'])){
-    header('Location: index.php');
+
+session_start();
+
+if (isset($_POST['submit'])) {
+  include 'connection.php';
+
+  $usuario = mysqli_real_escape_string($conexao, $_POST['usuario']);
+  $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+
+  // Verifica campos vazios
+  if (empty($usuario) || empty($senha)) {
+    header("Location: login.php?login=empty");
     exit();
+  } else {
+    // Verifica o nome de usuario
+    $query = "SELECT * FROM usuarios WHERE nome='$usuario' OR email='$usuario'";
+    $resultado = mysqli_query($conexao, $query);
+    $verificacao = mysqli_num_rows($resultado);
+
+    if($verificacao < 1) {
+      header("Location: login.php?login=error");
+      exit();
+    } else {
+      if($row = mysqli_fetch_assoc($resultado)) {
+        // Descriptografando a senha
+        $descriptosenha = password_verify($senha, $row['senha']);
+        if($descriptosenha == false) {
+          header("Location: login.php?login=error");
+          exit();
+        }elseif($descriptosenha == true) {
+          // Login sucesso!!!
+          $_SESSION['id'] = $row['id'];
+          $_SESSION['usuario'] = $row['nome'];
+          $_SESSION['email'] = $row['email'];
+          // header("Location: login.php?login=success");
+          header("Location: ../dashboard.php");
+          exit();
+        }
+      }
+    }
   }
-  
-  $usuario = $_POST['usuario'];
-  $senha = $_POST['senha'];
-  
-  $query = "select id, usuario from usuarios where usuario = '{$usuario}' and senha = '{$senha}'";
-  $result = mysqli_query($conexao, $query);
-  
-  ?>
-  <section class="container">
-    
-    <?php
-  if(1==1) {
-    ?>
-    <h1>Parabens, voce esta logado!</h1>
-    <h3><?=$conexao?></h3>
-    <?php
-  }else {
-    ?>
-    <h1>Deu zica!</h1>
-    <?php
-  }
-  
-  ?>
-  <?php 
-  include("footer.php");
-  
-  ?>
+} else {
+  header("Location: login.php?login=error");
+  exit();
+}
