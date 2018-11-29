@@ -26,7 +26,7 @@ if(isset($_POST['submit'])) {
       //  Insere o usuario no banco de dados
       $query = "INSERT INTO usuarios (nome, email, senha) VALUES ('$usuario', '$email', '$criptosenha');";
       mysqli_query($conexao, $query);
-      header("Location: ../index.php?signup=success");
+      header("Location: ../login.php");
       exit();
     }
   }

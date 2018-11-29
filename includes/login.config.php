@@ -34,6 +34,8 @@ if (isset($_POST['submit'])) {
           $_SESSION['usuario'] = $row['nome'];
           $_SESSION['email'] = $row['email'];
           // header("Location: login.php?login=success");
+
+      echo "<script type='text/javascript'>alert('cadastrado com sucesso!');</script>";
           header("Location: ../dashboard.php");
           exit();
         }
