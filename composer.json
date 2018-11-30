@@ -1,0 +1,11 @@
+{
+    "name": "fern/nba",
+    "description": "NBA Stars",
+    "authors": [
+        {
+            "name": "Fernando Augusto",
+            "email": "fernandoajneto@gmail.com"
+        }
+    ],
+    "require": {}
+}
