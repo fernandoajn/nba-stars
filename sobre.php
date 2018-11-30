@@ -13,8 +13,8 @@ include("header.php");
       </p>
       
     </div> 
-    <a href="https://celticsbrasil.com.br/entenda-as-posicoes-do-basquete/" class="btn btn-primary" target="_blank">Lista de Jogadores (2018)</a> 
-    <a href="http://www.nba.com/players/" class="btn btn-secondary" target="_blank">Entenda as posições do basquete</a>
+    <a href="http://www.nba.com/players/" class="btn btn-primary" target="_blank">Lista de Jogadores (2018)</a> 
+    <a href="https://celticsbrasil.com.br/entenda-as-posicoes-do-basquete/" class="btn btn-secondary" target="_blank">Entenda as posições do basquete</a>
 
   </div>
 
