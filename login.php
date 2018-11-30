@@ -11,6 +11,12 @@ if(isset($_SESSION['usuario'])){
         <div class="main">
     
             <form action="includes/login.config.php" class="form" method="post">
+                <?php
+                    if(isset($_SESSION['msg'])) {
+                        echo $_SESSION['msg'];
+						unset($_SESSION['msg']);
+					}
+                ?>
                 <input type="text" name="usuario" placeholder="Usuário">
                 <input type="password" name="senha" placeholder="Senha">
                 <button type="submit" name="submit" class="btn btn-primary">Entrar</button>

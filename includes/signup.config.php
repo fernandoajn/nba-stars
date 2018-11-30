@@ -18,8 +18,9 @@ if (isset($_POST['submit'])) {
     $verificacao = mysqli_num_rows($resultado);
 
     if ($verificacao > 0) {
-      header("Location: ../index.php?signup=userexists");
-      exit();
+      echo $msg;
+      // header("Location: ../index.php");
+      // exit();
     } else {
       // Criptografa a senha
       $criptosenha = password_hash($senha, PASSWORD_DEFAULT);
