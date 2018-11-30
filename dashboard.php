@@ -15,7 +15,7 @@ if(array_key_exists("removido", $_GET) && $_GET['removido'] == 'true') {
 
 $jogadores = buscaJogadores($conexao);
 ?>
-<div class="content div-2">
+<div class="content fluid">
   <div class="cpanel">
       <!-- <span>Meu Dream Team</span> -->
       <table class="players-list">
@@ -53,10 +53,9 @@ foreach ($jogadores as $jogador) :
       <!-- <div id="warning">Mensagem de retorno aqui</div> -->
     </div>
     <form class="form" action="adicionar.php" method="post">
-      <small>Adicionar jogador: </small>
+      <small class="task-title">Adicionar jogador: </small>
       <input type="text" placeholder="Nome" name="nome">
       <input type="text" placeholder="Sobrenome" name="sobrenome">
-      <!-- <input type="text" placeholder="Posição" name="posicao" max="2" maxlength="2"> -->
       <select name="posicao" id="posicao">
         <option value="" disabled>Posição:</option>
         <option value="PG">Point Guard</option>
@@ -67,7 +66,8 @@ foreach ($jogadores as $jogador) :
       </select>
       <input type="number" placeholder="Altura" min="1.78" max="2.35" step="0.01" name="altura">
       <input type="number" placeholder="N° da camisa" min="0" max="99" name="numero">
-      <button class="btn btn-primary" type="submit" onclick="ajax('')">Adicionar</button>
+      <button class="btn btn-secondary" type="submit" onclick="ajax('')">Adicionar</button>
+      <small><a href="sobre.php">Precisa de ajuda?</a></small>
     </form>
     
   </div>

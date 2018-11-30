@@ -38,6 +38,17 @@ a:hover {
   width: 15%;
   align-items: center; }
 
+.nav-item {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  transition: 0.3s;
+  border-radius: 5px;
+  box-sizing: border-box; }
+  .nav-item:hover {
+    background: #C71A33; }
+  .nav-item a:hover {
+    text-decoration: none; }
+
 .btn-logout {
   border: 0;
   background: none;
@@ -120,6 +131,14 @@ a:hover {
   background-color: #C71A33;
   color: #FFF; }
 
+.link {
+  font-weight: bold; }
+
+.v1 {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  height: 40vh;
+  margin: 0 10px; }
+
 .sobre {
   text-align: center;
   width: 70%; }
@@ -144,15 +163,20 @@ a:hover {
   width: 100%;
   text-align: center;
   font-size: 1.2em;
-  line-height: 2em; }
+  line-height: 2em;
+  border-collapse: collapse; }
   .players-list th {
     font-weight: bold;
-    background-color: #C71A33;
+    background-color: #244187;
     padding: 5px 10px; }
+  .players-list th:nth-child(1) {
+    border-top-left-radius: 10px; }
+  .players-list th:nth-child(6) {
+    border-top-right-radius: 10px; }
 
-.div-2 {
+.fluid {
   flex-direction: row;
-  width: 70%; }
+  width: 75%; }
 
 .btn-none {
   background: rgba(0, 0, 0, 0.1);
@@ -160,6 +184,12 @@ a:hover {
   color: #FFF;
   font-size: 1.0em;
   cursor: pointer; }
+
+.task-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center; }
 
 .footer {
   width: 100%;

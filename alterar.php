@@ -8,7 +8,7 @@ $jogador = buscaJogador($conexao, $id);
 
 ?>
 <form class="form" action="alterar.config.php" method="post">
-      <small> Alterar jogador: </small>
+      <small class="task-title">Editar jogador:</small>
       <input type="hidden" name="id" value="<?=$id?>">
       <input type="text" value="<?=$jogador->nome?>" name="nome">
       <input type="text" placeholder="Sobrenome" value="<?=$jogador->sobrenome?>" name="sobrenome">

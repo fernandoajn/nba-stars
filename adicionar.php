@@ -12,9 +12,11 @@ $jogador->altura = $_POST['altura'];
 $jogador->numero = $_POST['numero'];
 
 if(addJogador($conexao, $jogador)) {
-  echo '<span>Jogador adicionado com sucesso!</span>';
+  echo 'mensagem de sucesso';
   header("Location: dashboard.php");
   exit();
 }else {
-  echo '<span>Ocorreu um erro! Tente mais tarde!</span>';
+  echo 'mensagem de erro';
+  header("Location: dashboard.php");
+  exit();
 }

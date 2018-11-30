@@ -14,9 +14,8 @@ if (isset($_SESSION['usuario'])) {
                 <input type="text" name="usuario" placeholder="Usuário">
                 <input type="email" name="email" placeholder="E-mail">
                 <input type="password" name="senha" placeholder="Senha">
-                <!-- <input type="password" name="confirma_senha" placeholder="Confirmar senha"> -->
                 <button class="btn btn-secondary" type="submit" name="submit">Cadastrar-se</button>
-                <a class="btn btn-primary" type="button" href="login.php">Entrar</a>
+                <small>Já tem uma conta? <a href="login.php" class="link">Faça o login!</a> </small>
             </form>
 
         </div>

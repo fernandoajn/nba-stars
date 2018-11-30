@@ -25,6 +25,22 @@
   align-items: center;
 }
 
+.nav-item {
+  background: rgba($color: black, $alpha: 0.5);
+  padding: 10px 20px;
+  transition: 0.3s;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &:hover {
+    background: $vermelho;
+  }
+
+  & a:hover {
+    text-decoration: none;
+  }
+}
+
 .btn-logout {
   border: 0;
   background: none;

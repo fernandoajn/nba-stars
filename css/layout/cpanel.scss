@@ -11,17 +11,26 @@
   text-align: center;
   font-size: 1.2em;
   line-height: 2em;
+  border-collapse: collapse;
 
   & th {
     font-weight: bold;
-    background-color: $vermelho;
+    background-color: $azul;
     padding: 5px 10px;
+  }
+
+  & th:nth-child(1) {
+    border-top-left-radius: 10px;
+  }
+
+  & th:nth-child(6) {
+    border-top-right-radius: 10px;
   }
 }
 
-.div-2 {
+.fluid {
   flex-direction: row;
-  width: 70%;
+  width: 75%;
 }
 
 .btn-none{
@@ -30,4 +39,11 @@
   color: $branco;
   font-size: 1.0em;
   cursor: pointer;
+}
+
+.task-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
 }

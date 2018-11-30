@@ -22,8 +22,8 @@
   <nav class="navbar">
       <h1>NBA STARS</h1>
       <ul class="nav-menu">
-      <li><a href="index.php">Home</a></li>
-      <li><a href="sobre.php">Sobre</a></li>
+      <li class="nav-item"><a href="index.php">Home</a></li>
+      <li class="nav-item"><a href="sobre.php">Sobre</a></li>
     <?php 
       if(isset($_SESSION['id'])) {
         echo ' <li><form action="includes/logout.config.php" method="post">
