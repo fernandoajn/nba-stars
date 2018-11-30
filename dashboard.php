@@ -37,7 +37,7 @@ foreach ($jogadores as $jogador) :
           <td><?=$jogador->nome.' '.$jogador->sobrenome?></td>
           <td><?=$jogador->numero?></td>
           <td><?=$jogador->altura?>m</td>
-          <td><i class="fas fa-edit"></i></td>
+          <td><a href="alterar.php?id=<?=$jogador->id?>"><i class="fas fa-edit"></i></a></td>
           <td>
             <form action="remover.php" method="post">
               <input type="hidden" name="id" value="<?=$jogador->id?>">
@@ -53,7 +53,7 @@ foreach ($jogadores as $jogador) :
       <!-- <div id="warning">Mensagem de retorno aqui</div> -->
     </div>
     <form class="form" action="adicionar.php" method="post">
-      <small>Novo jogador: </small>
+      <small>Adicionar jogador: </small>
       <input type="text" placeholder="Nome" name="nome">
       <input type="text" placeholder="Sobrenome" name="sobrenome">
       <!-- <input type="text" placeholder="Posição" name="posicao" max="2" maxlength="2"> -->
