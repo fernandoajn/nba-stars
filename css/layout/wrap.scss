@@ -46,15 +46,22 @@
   flex-direction: column;
   box-sizing: border-box;
   padding: 20px;
-
-  & input {
+  
+  & input, select {
     border-radius: 5px;
     border: 1px solid #ccc;
-    padding: 10px;
-    margin: 5px 0;
     font-size: 0.9em;
-    width: 300px;
+    margin: 5px 0;
+    padding: 10px;
+  }
+
+  & input {
     text-align: center;
+    width: 300px;
+  }
+
+  & select {
+    background-color: white;
   }
 }
 

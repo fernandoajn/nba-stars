@@ -56,7 +56,15 @@ foreach ($jogadores as $jogador) :
       <small>Novo jogador: </small>
       <input type="text" placeholder="Nome" name="nome">
       <input type="text" placeholder="Sobrenome" name="sobrenome">
-      <input type="text" placeholder="Posição" name="posicao">
+      <!-- <input type="text" placeholder="Posição" name="posicao" max="2" maxlength="2"> -->
+      <select name="posicao" id="posicao">
+        <option value="" disabled>Posição:</option>
+        <option value="PG">Point Guard</option>
+        <option value="SG">Shooting Guard</option>
+        <option value="SF">Small Forward</option>
+        <option value="PF">Power Forward</option>
+        <option value="C">Center</option>
+      </select>
       <input type="number" placeholder="Altura" min="1.78" max="2.35" step="0.01" name="altura">
       <input type="number" placeholder="N° da camisa" min="0" max="99" name="numero">
       <button class="btn btn-primary" type="submit" onclick="ajax('')">Adicionar</button>
