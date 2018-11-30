@@ -57,8 +57,8 @@ foreach ($jogadores as $jogador) :
       <input type="text" placeholder="Nome" name="nome">
       <input type="text" placeholder="Sobrenome" name="sobrenome">
       <input type="text" placeholder="Posição" name="posicao">
-      <input type="text" placeholder="Altura" name="altura">
-      <input type="text" placeholder="N° da camisa" name="numero">
+      <input type="number" placeholder="Altura" min="1.78" max="2.35" step="0.01" name="altura">
+      <input type="number" placeholder="N° da camisa" min="0" max="99" name="numero">
       <button class="btn btn-primary" type="submit" onclick="ajax('')">Adicionar</button>
     </form>
     

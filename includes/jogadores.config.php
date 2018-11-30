@@ -34,4 +34,5 @@ function rmJogador($conexao, $id) {
   $query = "DELETE FROM jogadores WHERE id_jogador = {$id}";
   return mysqli_query($conexao, $query);
 }
+
 ?>
