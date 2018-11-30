@@ -1,6 +1,7 @@
 .cpanel {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   width: 100%;
   box-sizing: border-box;
 }
@@ -12,7 +13,13 @@
   line-height: 2em;
 
   & th {
+    font-weight: bold;
     background-color: $vermelho;
     padding: 5px 10px;
   }
+}
+
+.div-2 {
+  flex-direction: row;
+  width: 70%;
 }

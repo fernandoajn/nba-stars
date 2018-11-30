@@ -2,11 +2,11 @@
 
 class Jogador
 {
+  public $id;
+  public $numero;
   public $posicao;
   public $nome;
   public $sobrenome;
-  public $idade;
   public $altura;
-  public $numero;
 }
 ?>

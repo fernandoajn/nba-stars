@@ -1,66 +1,55 @@
 <?php
 include("header.php");
+require_once("includes/connection.php");
+require_once("includes/jogadores.config.php");
+
 // Pagina acessivel somente se estiver logado
-if(!isset($_SESSION['usuario'])){
-   header("Location:login.php");
+if (!isset($_SESSION['usuario'])) {
+  header("Location:login.php");
 }
+
+$jogadores = buscaJogadores($conexao);
 ?>
-<div class="content">
-  <span>Meu Dream Team</span>
-    <div class="cpanel">
+<div class="content div-2">
+  <div class="cpanel">
+      <!-- <span>Meu Dream Team</span> -->
       <table class="players-list">
         <tr>
-          <th>#</th>
+          <th>Posição</th>
           <th>Nome</th>
-          <th>Posicao</th>
-          <th>Idade</th>
+          <th>Camisa</th>
           <th>Altura</th>
           <!-- <th>@</th> -->
         </tr>
+        
+        <?php 
+foreach ($jogadores as $jogador) :
+  ?>        
 
         <tr>
-          <td>30</td>
-          <td>Stephen Curry</td>
-          <td>PG</td>
-          <td>30</td>
-          <td>1.91</td>
+          <td><?=$jogador->posicao?></td>
+          <td><?=$jogador->nome.' '.$jogador->sobrenome?></td>
+          <td><?=$jogador->numero?></td>
+          <td><?=$jogador->altura?>m</td>
         </tr>
-
-        <tr>
-          <td>8</td>
-          <td>Zach LaVine</td>
-          <td>SG</td>
-          <td>22</td>
-          <td>1.98</td>
-        </tr>
-
-        <tr>
-          <td>23 </td>
-          <td>Lebron James</td>
-          <td>SF</td>
-          <td>32</td>
-          <td>2.03</td>
-        </tr>
-
-        <tr>
-          <td>35</td>
-          <td>Kevin Durant</td>
-          <td>PF</td>
-          <td>29</td>
-          <td>2.08</td>
-        </tr>
-
-        <tr>
-          <td>21</td>
-          <td>DeAndre Jordan</td>
-          <td>C</td>
-          <td>32</td>
-          <td>2.11</td>
-        </tr>
-
+        
+        <?php endforeach ?>
+        
       </table>
+      <!-- <div id="warning">Mensagem de retorno aqui</div> -->
     </div>
-</div>
+    <form class="form">
+      <small>Novo jogador: </small>
+      <input type="text" placeholder="Nome" name="nome">
+      <input type="text" placeholder="Sobrenome" name="sobrenome">
+      <input type="text" placeholder="Posição" name="posicao">
+      <input type="text" placeholder="Altura" name="altura">
+      <input type="text" placeholder="N° da camisa" name="numero">
+      <button class="btn btn-primary" type="submit" onclick="ajax('')">Adicionar</button>
+    </form>
+    
+  </div>
+
 
 <?php 
 include("footer.php");

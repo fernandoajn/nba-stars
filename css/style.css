@@ -133,6 +133,7 @@ a:hover {
 .cpanel {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   width: 100%;
   box-sizing: border-box; }
 
@@ -142,8 +143,13 @@ a:hover {
   font-size: 1.2em;
   line-height: 2em; }
   .players-list th {
+    font-weight: bold;
     background-color: #C71A33;
     padding: 5px 10px; }
+
+.div-2 {
+  flex-direction: row;
+  width: 70%; }
 
 .footer {
   width: 100%;
