@@ -2,10 +2,10 @@
 require_once("connection.php");
 require_once("class/Jogador.php");
 
-function buscaJogadores($conexao)
+function buscaJogadores($conexao, $usuario)
 {
   $jogadores = array();
-  $query = "SELECT * FROM jogadores";
+  $query = "SELECT * FROM time_$usuario";
   $resultado = mysqli_query($conexao, $query);
 
   while ($jogadores_array = mysqli_fetch_assoc($resultado)) {
@@ -24,8 +24,8 @@ function buscaJogadores($conexao)
   return $jogadores;
 }
 
-function buscaJogador($conexao, $id) {
-  $query = "SELECT * FROM jogadores WHERE id_jogador = {$id}"; 
+function buscaJogador($conexao, $id, $usuario) {
+  $query = "SELECT * FROM time_$usuario WHERE id_jogador = {$id}"; 
   $resultado = mysqli_query($conexao, $query);
   $buscado = mysqli_fetch_assoc($resultado);
 
@@ -40,19 +40,19 @@ function buscaJogador($conexao, $id) {
   return $jogador;
 }
 
-function addJogador($conexao, Jogador $jogador) {
-  $query = "INSERT INTO jogadores (numero, nome, sobrenome, altura, posicao) VALUES ({$jogador->numero}, '{$jogador->nome}', '{$jogador->sobrenome}', {$jogador->altura},
+function addJogador($conexao, Jogador $jogador, $usuario) {
+  $query = "INSERT INTO time_$usuario (numero, nome, sobrenome, altura, posicao) VALUES ({$jogador->numero}, '{$jogador->nome}', '{$jogador->sobrenome}', {$jogador->altura},
   '{$jogador->posicao}')";
   return mysqli_query($conexao, $query);
 }
 
-function rmJogador($conexao, $id) {
-  $query = "DELETE FROM jogadores WHERE id_jogador = {$id}";
+function rmJogador($conexao, $id, $usuario) {
+  $query = "DELETE FROM time_$usuario WHERE id_jogador = {$id}";
   return mysqli_query($conexao, $query);
 }
 
-function alterarJogador($conexao, Jogador $jogador){
-  $query = "UPDATE jogadores SET numero = {$jogador->numero}, nome = '{$jogador->nome}', sobrenome = '{$jogador->sobrenome}', altura = {$jogador->altura},
+function alterarJogador($conexao, Jogador $jogador, $usuario){
+  $query = "UPDATE time_$usuario SET numero = {$jogador->numero}, nome = '{$jogador->nome}', sobrenome = '{$jogador->sobrenome}', altura = {$jogador->altura},
   posicao = '{$jogador->posicao}' WHERE id_jogador = {$jogador->id}";
   return mysqli_query($conexao, $query);
 }

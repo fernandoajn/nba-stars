@@ -7,7 +7,7 @@
 */
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  background: rgba(0, 0, 0, 0.8) url("https://cdn.hipwallpaper.com/i/7/75/VUov1P.jpg") no-repeat fixed center;
+  background: rgba(0, 0, 0, 0.9) url("https://cdn.hipwallpaper.com/i/7/75/VUov1P.jpg") no-repeat fixed center;
   background-size: cover;
   background-blend-mode: darken; }
 
@@ -190,6 +190,10 @@ a:hover {
   font-size: 1.5em;
   margin-bottom: 10px;
   text-align: center; }
+
+.username {
+  display: inline;
+  text-transform: capitalize; }
 
 .footer {
   width: 100%;

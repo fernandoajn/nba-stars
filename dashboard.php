@@ -8,16 +8,19 @@ if (!isset($_SESSION['usuario'])) {
   header("Location:login.php");
 }
 
+// Definindo o usuario da sessao atual
+
+
 // Remocao
 if(array_key_exists("removido", $_GET) && $_GET['removido'] == 'true') {
   // echo "<span>Removido com sucesso!</span>";
 }
 
-$jogadores = buscaJogadores($conexao);
+$jogadores = buscaJogadores($conexao, $usuario);
 ?>
 <div class="content fluid">
   <div class="cpanel">
-      <!-- <span>Meu Dream Team</span> -->
+      <span class="task-title">Time de <h5 class="username"><?=$usuario?></h5></span>
       <table class="players-list">
         <tr>
           <th>Posição</th>
@@ -66,7 +69,7 @@ foreach ($jogadores as $jogador) :
       </select>
       <input type="number" placeholder="Altura" min="1.78" max="2.35" step="0.01" name="altura">
       <input type="number" placeholder="N° da camisa" min="0" max="99" name="numero">
-      <button class="btn btn-secondary" type="submit" onclick="ajax('')">Adicionar</button>
+      <button class="btn btn-secondary" type="submit">Adicionar</button>
       <small><a href="sobre.php">Precisa de ajuda?</a></small>
     </form>
     

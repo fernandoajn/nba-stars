@@ -4,7 +4,7 @@ include("includes/connection.php");
 include("includes/jogadores.config.php");
 
 $id = $_GET['id'];
-$jogador = buscaJogador($conexao, $id);
+$jogador = buscaJogador($conexao, $id, $usuario);
 
 ?>
 <form class="form" action="alterar.config.php" method="post">

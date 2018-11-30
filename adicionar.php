@@ -11,7 +11,7 @@ $jogador->posicao = $_POST['posicao'];
 $jogador->altura = $_POST['altura'];
 $jogador->numero = $_POST['numero'];
 
-if(addJogador($conexao, $jogador)) {
+if(addJogador($conexao, $jogador, $usuario)) {
   echo 'mensagem de sucesso';
   header("Location: dashboard.php");
   exit();
