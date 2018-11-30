@@ -29,4 +29,9 @@ function addJogador($conexao, Jogador $jogador) {
   '{$jogador->posicao}')";
   return mysqli_query($conexao, $query);
 }
+
+function rmJogador($conexao, $id) {
+  $query = "DELETE FROM jogadores WHERE id_jogador = {$id}";
+  return mysqli_query($conexao, $query);
+}
 ?>

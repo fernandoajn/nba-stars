@@ -13,6 +13,8 @@ $jogador->numero = $_POST['numero'];
 
 if(addJogador($conexao, $jogador)) {
   echo '<span>Jogador adicionado com sucesso!</span>';
+  header("Location: dashboard.php");
+  exit();
 }else {
   echo '<span>Ocorreu um erro! Tente mais tarde!</span>';
 }

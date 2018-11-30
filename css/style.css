@@ -151,6 +151,13 @@ a:hover {
   flex-direction: row;
   width: 70%; }
 
+.btn-none {
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  color: #FFF;
+  font-size: 1.0em;
+  cursor: pointer; }
+
 .footer {
   width: 100%;
   background-color: #244187;

@@ -23,3 +23,11 @@
   flex-direction: row;
   width: 70%;
 }
+
+.btn-none{
+  background: rgba($color: #000000, $alpha: 0.1);
+  border: none;
+  color: $branco;
+  font-size: 1.0em;
+  cursor: pointer;
+}

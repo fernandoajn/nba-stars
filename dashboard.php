@@ -8,6 +8,11 @@ if (!isset($_SESSION['usuario'])) {
   header("Location:login.php");
 }
 
+// Remocao
+if(array_key_exists("removido", $_GET) && $_GET['removido'] == 'true') {
+  // echo "<span>Removido com sucesso!</span>";
+}
+
 $jogadores = buscaJogadores($conexao);
 ?>
 <div class="content div-2">
@@ -19,7 +24,8 @@ $jogadores = buscaJogadores($conexao);
           <th>Nome</th>
           <th>Camisa</th>
           <th>Altura</th>
-          <!-- <th>@</th> -->
+          <th></th>
+          <th></th>
         </tr>
         
         <?php 
@@ -31,6 +37,14 @@ foreach ($jogadores as $jogador) :
           <td><?=$jogador->nome.' '.$jogador->sobrenome?></td>
           <td><?=$jogador->numero?></td>
           <td><?=$jogador->altura?>m</td>
+          <td><i class="fas fa-edit"></i></td>
+          <td>
+            <form action="remover.php" method="post">
+              <input type="hidden" name="id" value="<?=$jogador->id?>">
+              <button class="btn-none"><i class='fas fa-times'></i></button>
+            </form>
+          </td>
+            
         </tr>
         
         <?php endforeach ?>
@@ -38,7 +52,7 @@ foreach ($jogadores as $jogador) :
       </table>
       <!-- <div id="warning">Mensagem de retorno aqui</div> -->
     </div>
-    <form class="form">
+    <form class="form" action="adicionar.php" method="post">
       <small>Novo jogador: </small>
       <input type="text" placeholder="Nome" name="nome">
       <input type="text" placeholder="Sobrenome" name="sobrenome">
