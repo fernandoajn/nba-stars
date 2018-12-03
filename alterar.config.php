@@ -13,7 +13,7 @@ $jogador->posicao = $_POST['posicao'];
 $jogador->numero = $_POST['numero'];
 $jogador->altura = $_POST['altura'];
 
-if(alterarJogador($conexao, $jogador)) {
+if(alterarJogador($conexao, $jogador, $usuario)) {
   echo "<span>Produto alterado com sucesso!<span>";
   header("Location: dashboard.php");
 }else {
