@@ -4,6 +4,11 @@
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
+  overflow-x: auto;
+
+  @media #{$mq-mobile} {
+    justify-content: center;
+  }
 }
 
 .players-list {
@@ -26,11 +31,21 @@
   & th:nth-child(6) {
     border-top-right-radius: 10px;
   }
+  
+  @media #{$mq-mobile} {
+    font-size: 0.8em;
+  }
 }
 
 .fluid {
   flex-direction: row;
   width: 75%;
+  
+  @media #{$mq-mobile} {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
 }
 
 .btn-none{

@@ -11,6 +11,5 @@ Esse é um projeto com finalidade de estudar PHP com integração ao MySQL.
 Live Demo - http://ffaneto.com/nba
 
 # Próximas atualizações
-- Retornar mensagens de erro e sucesso ao realizar o cadastro de usuários e alterações nos jogadores;
-- Configurar responsividade para dispositivos mobile;
-- Exibir outros usuários e seus respectivos times.
+- Retornar mensagens de erro e sucesso ao realizar o cadastro de usuários e alterações nos jogadores; []
+- Exibir outros usuários e seus respectivos times. []

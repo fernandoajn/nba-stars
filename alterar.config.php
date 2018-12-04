@@ -22,4 +22,4 @@ if(alterarJogador($conexao, $jogador, $usuario)) {
 }
 
 include("footer.php");
-?>
+?>    

@@ -2,15 +2,27 @@
   text-align: center;
   width: 70%;
 
+  @media #{$mq-mobile} {
+    width: 90%;
+  }
+
   & h1 {
     font-size: 3em;
     line-height: 1.5em;
     font-weight: bolder;
+
+    @media #{$mq-mobile} {
+      display: none;
+    }
   }
 
   & p {
     font-size: 1.2em;
     line-height: 1.2em;
+
+    @media #{$mq-mobile} {
+      font-size: 1em;
+    }
   }
 
   & a {

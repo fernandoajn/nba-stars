@@ -8,9 +8,6 @@ if (!isset($_SESSION['usuario'])) {
   header("Location:login.php");
 }
 
-// Definindo o usuario da sessao atual
-
-
 // Remocao
 if(array_key_exists("removido", $_GET) && $_GET['removido'] == 'true') {
   // echo "<span>Removido com sucesso!</span>";
@@ -73,6 +70,12 @@ foreach ($jogadores as $jogador) :
       <small><a href="sobre.php">Precisa de ajuda?</a></small>
     </form>
     
+  </div>
+
+  <div class="aviso-responsivo">
+    <span>Dispositivo incompatível no momento, aguarde  atualizações. <br><br>
+          Lamentamos o transtorno.
+    </span>
   </div>
 
 

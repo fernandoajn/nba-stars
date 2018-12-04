@@ -21,7 +21,10 @@
 <body>
   <nav class="navbar">
       <h1>NBA STARS</h1>
-      <ul class="nav-menu">
+      <span class="navbar-toggle" id="toggle-navbar">
+            <i class="fas fa-bars"></i>
+        </span>
+      <ul class="nav-menu" id="toggle-menu">
       <li class="nav-item"><a href="index.php">Home</a></li>
       <li class="nav-item"><a href="sobre.php">Sobre</a></li>
     <?php 
