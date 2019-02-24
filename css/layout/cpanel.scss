@@ -23,14 +23,6 @@
     background-color: $azul;
     padding: 5px 10px;
   }
-
-  & th:nth-child(1) {
-    border-top-left-radius: 10px;
-  }
-
-  & th:nth-child(6) {
-    border-top-right-radius: 10px;
-  }
   
   @media #{$mq-mobile} {
     font-size: 0.8em;
@@ -39,7 +31,7 @@
 
 .fluid {
   flex-direction: row;
-  width: 75%;
+  width: 80%;
   
   @media #{$mq-mobile} {
     flex-direction: column;
@@ -66,4 +58,51 @@
 .username {
   display: inline;
   text-transform: capitalize;
+}
+
+.modal-hide {
+  display: none;  
+}
+
+.modal-show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba($color: #000, $alpha: 0.8);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation-duration: 0.3s;
+  animation-name: slideTop;
+  z-index: 1;
+}
+
+.modal-content {
+  border-radius: 10px;
+  background-color: rgba($color: #ccc, $alpha: 0.5);
+  padding: 0 3em;
+}
+
+.modal-toggler {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  color: white;
+  position: relative;
+  display: block;
+  bottom: 160px;
+  left: 40px;
+  font-weight: bold;
+}
+
+@keyframes slideTop {
+  from {top: -1000px; opacity: 0};
+  to {top: 0; opacity: 1};
+}
+
+@keyframes backToTop {
+  from {top: 0; opacity:1};
+  to {top: -1000px; opacity: 0; display: none};
 }

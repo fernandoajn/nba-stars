@@ -52,28 +52,37 @@ foreach ($jogadores as $jogador) :
       </table>
       <!-- <div id="warning">Mensagem de retorno aqui</div> -->
     </div>
-    <form class="form" action="adicionar.php" method="post">
-      <small class="task-title">Adicionar jogador: </small>
-      <input type="text" placeholder="Nome" name="nome">
-      <input type="text" placeholder="Sobrenome" name="sobrenome">
-      <select name="posicao" id="posicao">
-        <option value="" disabled>Posição:</option>
-        <option value="PG">Point Guard</option>
-        <option value="SG">Shooting Guard</option>
-        <option value="SF">Small Forward</option>
-        <option value="PF">Power Forward</option>
-        <option value="C">Center</option>
-      </select>
-      <input type="number" placeholder="Altura" min="1.78" max="2.35" step="0.01" name="altura">
-      <input type="number" placeholder="N° da camisa" min="0" max="99" name="numero">
-      <button class="btn btn-secondary" type="submit">Adicionar</button>
-      <small><a href="sobre.php">Precisa de ajuda?</a></small>
-    </form>
     
   </div>
+  <a href="#" name="submit" data-show="modal" id="btnadd" class="btn btn-secondary">Adicionar jogador</a>
+
+
+  <div id="addJogador" class="modal-hide">
+    <a type="button" class="modal-toggler"><i class="fas fa-times fa-2x"></i></a>
+    <div class="modal-content">
+      <form class="form" action="adicionar.php" method="post">
+        <small class="task-title">Adicionar jogador: </small>
+        <input type="text" placeholder="Nome" name="nome">
+        <input type="text" placeholder="Sobrenome" name="sobrenome">
+        <select name="posicao" id="posicao">
+          <option value="" disabled>Posição:</option>
+          <option value="PG">Point Guard</option>
+          <option value="SG">Shooting Guard</option>
+          <option value="SF">Small Forward</option>
+          <option value="PF">Power Forward</option>
+          <option value="C">Center</option>
+        </select>
+          <input type="number" placeholder="Altura" min="1.78" max="2.35" step="0.01" name="altura">
+          <input type="number" placeholder="N° da camisa" min="0" max="99" name="numero">
+          <button class="btn btn-secondary" type="submit">Adicionar</button>
+          <small><a href="sobre.php">Precisa de ajuda?</a></small>
+        </form>
+      </div>
+    </div>
 
   <div class="aviso-responsivo">
-    <span>Dispositivo incompatível no momento, aguarde  atualizações. <br><br>
+    <span>Dispositivo incompatível no momento, aguarde atualizações.
+          <br><br>
           Lamentamos o transtorno.
     </span>
   </div>
