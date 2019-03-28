@@ -1,25 +1,28 @@
-<?php
-include("header.php");
-include("includes/connection.php");
-include("includes/jogadores.config.php");
-require_once("class/Jogador.php");
+<?php include 'header.php'; ?>
+<?php 
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+require_once 'global.php';  
 
 $jogador = new Jogador();
+$jogadorDao = new JogadorDao(Connection::getConnection());
 
-$jogador->id = $_POST['id'];
-$jogador->nome = $_POST['nome'];
-$jogador->sobrenome = $_POST['sobrenome'];
-$jogador->posicao = $_POST['posicao'];
-$jogador->numero = $_POST['numero'];
-$jogador->altura = $_POST['altura'];
+$id = $_POST['id'];
+$nome = $_POST['nome'];
+$sobrenome = $_POST['sobrenome'];
+$posicao = $_POST['posicao'];
+$numero = $_POST['numero'];
+$altura = $_POST['altura'];
 
-if(alterarJogador($conexao, $jogador, $usuario)) {
-  echo "<span>Produto alterado com sucesso!<span>";
-  header("Location: dashboard.php");
+$jogador->setId($id);
+$jogador->setNome($nome);
+$jogador->setSobrenome($sobrenome);
+$jogador->setPosicao($posicao);
+$jogador->setNumero($numero);
+$jogador->setAltura($altura);
+
+if($jogadorDao->update($jogador)) {
+  header("Location: players.php");
 }else {
-  $msg = mysqli_error($conexao);
-  echo "<span>Erro: {$msg}</span>";
+  header("Location: alterar.php?id=".$_POST['id']);
 }
-
-include("footer.php");
-?>    

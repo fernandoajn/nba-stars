@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     exit();
   } else {
     // Verifica se o usuario ja existe
-    $query = "SELECT * FROM usuarios WHERE nome='$usuario'";
+    $query = "SELECT * FROM usuarios_nba WHERE nome='$usuario'";
     $resultado = mysqli_query($conexao, $query);
     $verificacao = mysqli_num_rows($resultado);
 
@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
     )";
       mysqli_query($conexao, $queryTime);
       //  Insere o usuario no banco de dados
-      $query = "INSERT INTO usuarios (nome, email, senha) VALUES ('$usuario', '$email', '$criptosenha');";
+      $query = "INSERT INTO usuarios_nba (nome, email, senha) VALUES ('$usuario', '$email', '$criptosenha');";
       mysqli_query($conexao, $query);
       header("Location: ../login.php");
       exit();

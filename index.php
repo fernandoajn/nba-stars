@@ -1,16 +1,15 @@
+<?php include("header.php"); ?>
 <?php 
-include("header.php");
-    // Impedindo que usuario va para pagina de cadastro quando estiver logado
-if (isset($_SESSION['usuario'])) {
-    header("Location:dashboard.php");
-}
+    if (isset($_SESSION['usuario'])) {
+        header("Location:dashboard.php");
+    } 
 ?>
     <div class="content">
         <span>Monte sua equipe!</span>
         <small>Reúna os seus jogadores preferidos da maior liga de basquete do mundo <br> e crie o seu próprio dream team.</small>
         <div class="main">
     
-            <form action="includes/signup.config.php" class="form" method="post">
+            <form action="user-post.php" class="form" method="post">
                 <input type="text" name="usuario" placeholder="Usuário">
                 <input type="email" name="email" placeholder="E-mail">
                 <input type="password" name="senha" placeholder="Senha">

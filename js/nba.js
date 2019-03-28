@@ -14,6 +14,11 @@ closeButton.addEventListener("click", () => {
   modal.classList.add('modal-hide');
 })
 
-const toggleModal = () => {
-   
-}
+(function() {
+  let clickables = document.querySelectorAll('.clickable');
+  clickables.forEach(function(element){
+    element.addEventListener("click", function() {
+      window.location = this.getAttribute('data-href');
+    });
+  });
+})();

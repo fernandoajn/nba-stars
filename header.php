@@ -11,6 +11,7 @@
   <link rel="shortcut icon" href="img/fav.ico" type="image/x-icon">
   <title>NBA Stars</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
@@ -26,6 +27,7 @@
         </span>
       <ul class="nav-menu" id="toggle-menu">
       <li class="nav-item"><a href="index.php">Home</a></li>
+      <li class="nav-item"><a href="players.php">Jogadores</a></li>
       <li class="nav-item"><a href="sobre.php">Sobre</a></li>
     <?php 
       if(isset($_SESSION['id'])) {

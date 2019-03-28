@@ -5,16 +5,20 @@ require_once("includes/jogadores.config.php");
 
 // Pagina acessivel somente se estiver logado
 if (!isset($_SESSION['usuario'])) {
-  header("Location:login.php");
+  // header("Location:login.php");
 }
 
-// Remocao
-if(array_key_exists("removido", $_GET) && $_GET['removido'] == 'true') {
-  // echo "<span>Removido com sucesso!</span>";
-}
+$playerIsAdd = $_GET['playeradd'];
 
 $jogadores = buscaJogadores($conexao, $usuario);
 ?>
+
+<?php if($playerIsAdd == 'success'): ?>
+  <div class="msg msg-success">Jogador adicionado com sucesso!</div>
+<?php elseif($playerIsAdd == 'fail'): ?>
+  <div class="msg msg-error">Não foi possível adicionar jogador!</div>
+<?php endif ?>
+
 <div class="content fluid">
   <div class="cpanel">
       <span class="task-title">Time de <h5 class="username"><?=$usuario?></h5></span>
@@ -79,7 +83,7 @@ foreach ($jogadores as $jogador) :
         </form>
       </div>
     </div>
-
+  
   <div class="aviso-responsivo">
     <span>Dispositivo incompatível no momento, aguarde atualizações.
           <br><br>

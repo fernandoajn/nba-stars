@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     exit();
   } else {
     // Verifica o nome de usuario
-    $query = "SELECT * FROM usuarios WHERE nome='$usuario' OR email='$usuario'";
+    $query = "SELECT * FROM usuarios_nba WHERE nome='$usuario' OR email='$usuario'";
     $resultado = mysqli_query($conexao, $query);
     $verificacao = mysqli_num_rows($resultado);
 
